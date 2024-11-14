@@ -4,19 +4,20 @@ import React, { useState } from 'react';
 import NavLink from './NavLink';
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from './MenuOverlay';
+import Image from 'next/image';
 
 const navLinks = [
     {
         title: "Обо мне",
-        path: "#Обо мне",
+        path: "/#arrow",
     },
     {
-        title: "Проекты",
-        path: "#Проекты",
+        title: "Мои работы",
+        path: "/#empty",
     },
     {
         title: "Контакты",
-        path: "#Контакты",
+        path: "/#email",
     }
 ]
 
@@ -30,7 +31,7 @@ const Navbar = () => {
                     href={"/"}
                     className="text-2xl md:text-5xl text-white font-semibold"
                 >
-                    LOGO
+                    <Image className="rounded-full" src="/images/logo.png" width={50} height={50} alt="logo" ></Image>
                 </Link>
                 <div className="mobile-menu block md:hidden">
                     {!navbarOpen ? (
